@@ -1,0 +1,15 @@
+David Tu
+david.tu2@csu.fullerton.edu
+
+A program which draws a teapot with two light sources (based on Professor Shafae's hello_glsl program)
+The light sources are white and the program uses the vertex and fragment shaders to position the verticies and color their resulting fragments, respectively. 
+The color of the fragments are based on the following formula: C=W((cos0 + 1)/2)^P where 0 is the angle between the eye vector and the reflection vector, R. 
+
+This is done for every color component:
+	For red, W = P = 1.
+	For green, W = 1 and P = 2. 
+	For blue, W = 1 and P = 20. 
+	Where R = 2N(N*L) - L.
+
+Possible defect:
+The requirements say that the bronze.vert.glsl is the vertex shader for your Gourand shader but it also states to calculate the color once per pixel like a Phong shader. I've programmed using the Phong shader instead.
